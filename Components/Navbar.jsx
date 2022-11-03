@@ -9,11 +9,14 @@ const Navbar = () => {
   const {showCart, setShowCart, totalQuantities} = useStateContext();
   return (
     <div className='navbar-container'>
-        <p className='logo'>
-            <Link href='/'> Veensus
-            {/* <img src= "./logo/Watermark.png" alt="" /> */}
+        <div className='logo'>
+          <div className='logo-container'>
+             <Link href='/'> 
+            <img src='https://i.postimg.cc/qvvs542c/Watermark.png' alt="Vensus Logo"/>
             </Link>
-        </p>
+          </div>
+           
+        </div>
         <button type='button' className='cart-icon' onClick={() => setShowCart(true)}>
             <AiOutlineShopping/>
             <span className='cart-item-qty'>{totalQuantities}</span>
